@@ -2,11 +2,14 @@
 /** Entendendo import/exports em Common */
 /************************************* */
 
-//const Matematica = require('./matematica')
+/*
+const Matematica = require('./matematica')
+*/
 
 /************************************ */
 /** Entendendo import/exports em ES6 */
 /********************************** */
+
 /*
 //import { somar, subtrair, multiplicar} from './matematica';
 //import * as Matematica from './matematica';
@@ -23,6 +26,7 @@ console.log(`MULTIPLICAÇÃO: ${Matematica.multiplicar(n1, n2)}`);
 /************************************ */
 /** Importando arquivos de terceiros */
 /********************************** */
+
 /*
 import validator from "validator";
 
@@ -31,17 +35,33 @@ console.log(validator.isIP("127.0.0.1"));
 console.log(validator.isLowercase("Leonardo"));
 */
 
-
 /********************************************** */
 /** Instalando o Express e criando um servidor */
 /******************************************** */
 
+/*
 import express, { Request, Response } from "express";
 
 const server = express();
 
 server.get("/", (req: Request, res: Response) => {
   res.send("Hello World!");
+});
+
+server.listen(3000);
+*/
+
+/******************** */
+/** Teoria das Rotas */
+/****************** */
+
+
+import express, { Request, Response } from "express";
+
+const server = express();
+
+server.get("/contato", (req: Request, res: Response) => {
+  res.send("Esta é a pagina de contato");
 });
 
 server.listen(3000);

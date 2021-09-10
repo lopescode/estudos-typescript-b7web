@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leoolopes01/estudos-nodejs-com-typescript-b7web.git"
+    "url": "git+https://github.com/leoolopes01/estudos-typescript-b7web.git"
   },
   "author": "Leonardo Lopes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leoolopes01/estudos-nodejs-com-typescript-b7web/issues"
+    "url": "https://github.com/leoolopes01/estudos-typescript-b7web/issues"
   },
-  "homepage": "https://github.com/leoolopes01/estudos-nodejs-com-typescript-b7web#readme",
+  "homepage": "https://github.com/leoolopes01/estudos-typescript-b7web#readme",
   "devDependencies": {
     "@types/node": "^16.9.1",
     "@types/validator": "^13.6.3",
