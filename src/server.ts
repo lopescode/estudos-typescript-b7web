@@ -71,6 +71,7 @@ server.listen(3000);
 /** Trabalhando com mais Rotas */
 /**************************** */
 
+/*
 import express, { Request, Response } from "express";
 
 const server = express();
@@ -86,3 +87,19 @@ server.get("/voos/:origem-:destino", (req: Request, res: Response) => {
 });
 
 server.listen(3000);
+*/
+
+/*********************************** */
+/** Separando as rotas no seu lugar */
+/********************************* */
+
+import express from "express";
+import mainRoutes from './routes/index';
+import painelRoutes from './routes/painel';
+
+const server = express();
+
+server.use('/', mainRoutes);
+server.use('/painel', painelRoutes);
+
+server.listen(80)
