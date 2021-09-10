@@ -110,10 +110,39 @@ server.listen(80)
 /** Criando o 404 (página não encontrada) */
 /*************************************** */
 
+/*
 import express, { Request, Response } from "express";
 import mainRoutes from "./routes/index";
 
 const server = express();
+
+server.use(mainRoutes);
+
+server.use((req: Request, res: Response) => {
+  res.status(404).send("Página não encontrada!");
+});
+
+server.listen(80);
+*/
+
+/************************************** */
+/** Pasta pública e arquivos estáticos */
+/************************************ */
+
+import express, { Request, Response } from "express";
+import path from "path";
+import mainRoutes from "./routes/index";
+
+const server = express();
+
+//server.use(express.static("public"));
+// Testar as pastas publicas acessando o http://localhost/css/style.css
+// Testar as pastas publicas acessando o http://localhost/images/google.png
+
+
+server.use("/static", express.static(path.join(__dirname, "../public")));
+// Testar as pastas publicas acessando o http://localhost/static/css/style.css
+// Testar as pastas publicas acessando o http://localhost/static/images/google.png
 
 server.use(mainRoutes);
 
