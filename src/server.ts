@@ -55,13 +55,34 @@ server.listen(3000);
 /** Teoria das Rotas */
 /****************** */
 
-
+/*
 import express, { Request, Response } from "express";
 
 const server = express();
 
 server.get("/contato", (req: Request, res: Response) => {
   res.send("Esta é a pagina de contato");
+});
+
+server.listen(3000);
+*/
+
+/****************************** */
+/** Trabalhando com mais Rotas */
+/**************************** */
+
+import express, { Request, Response } from "express";
+
+const server = express();
+
+server.get("/noticia/:slug", (req: Request, res: Response) => {
+  let slug: string = req.params.slug;
+  res.send(`Notícia: ${slug}`);
+});
+
+server.get("/voos/:origem-:destino", (req: Request, res: Response) => {
+  let { origem, destino } = req.params;
+  res.send(`Procurando voos de ${origem.toUpperCase()} e ${destino.toUpperCase()}`);
 });
 
 server.listen(3000);
