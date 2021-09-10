@@ -1,0 +1,32 @@
+{
+  "name": "estudos-typescript-b7web",
+  "version": "1.0.0",
+  "description": "Estudos do curso de NodeJS + TypeScript com Bonieky Lacerda",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon dist/server.js",
+    "watch-ts": "tsc -w",
+    "start-dev": "nodemon src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoolopes01/estudos-nodejs-com-typescript-b7web.git"
+  },
+  "author": "Leonardo Lopes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leoolopes01/estudos-nodejs-com-typescript-b7web/issues"
+  },
+  "homepage": "https://github.com/leoolopes01/estudos-nodejs-com-typescript-b7web#readme",
+  "devDependencies": {
+    "@types/node": "^16.9.1",
+    "@types/validator": "^13.6.3",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.17.1",
+    "validator": "^13.6.0"
+  }
+}
