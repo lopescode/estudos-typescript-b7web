@@ -23,9 +23,25 @@ console.log(`MULTIPLICAÇÃO: ${Matematica.multiplicar(n1, n2)}`);
 /************************************ */
 /** Importando arquivos de terceiros */
 /********************************** */
-
+/*
 import validator from "validator";
 
 console.log(validator.isEmail("suporte@krolik.com.br"));
 console.log(validator.isIP("127.0.0.1"));
 console.log(validator.isLowercase("Leonardo"));
+*/
+
+
+/********************************************** */
+/** Instalando o Express e criando um servidor */
+/******************************************** */
+
+import express, { Request, Response } from "express";
+
+const server = express();
+
+server.get("/", (req: Request, res: Response) => {
+  res.send("Hello World!");
+});
+
+server.listen(3000);
