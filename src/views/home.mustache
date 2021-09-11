@@ -6,6 +6,11 @@
         <h1>Título da pagina</h1>
         <hr />
 
-        Opa, tudo bem {{ user.name }}?
+        {{#showWelcome}}
+            Opa, tudo bem {{ user.name }}?
+        {{/showWelcome}}
+        {{#showOld}}
+            Como vai a vida?
+        {{/showOld}}
     </body>
 </html>

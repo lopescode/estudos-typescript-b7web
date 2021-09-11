@@ -6,14 +6,23 @@ import { Router, Request, Response } from "express";
 const router = Router();
 
 router.get("/", (req: Request, res: Response) => {
-  /**Mustache: Exibindo informações */
+  /** Mustache: Exibindo informações */
   let user = {
     name: "Leonardo",
     age: 24
   }
+  let showOld: boolean = false;
+
+  if(user.age > 18) {
+    showOld = true;
+  }
 
   res.render('home', {
-    user
+    user,
+    /** Mustache: Exibição condicional */
+    //showWelcome: false // Não exibe
+    showWelcome: true, // Exibe
+    showOld
   });
 });
 
