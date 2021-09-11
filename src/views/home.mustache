@@ -1,43 +1,35 @@
-<html>
-    <head>
-        <title>Pagina Home</title>
-    </head>
-    <body>
-        <h1>Título da pagina</h1>
-        <hr />
+{{>partials/header}}
+    {{#showWelcome}}
+        Opa, tudo bem {{ user.name }}?
+    {{/showWelcome}}
+    {{#showOld}}
+        Como vai a vida?
+    {{/showOld}}
+    {{^showOld}}
+        Beleza?
+    {{/showOld}}
 
-        {{#showWelcome}}
-            Opa, tudo bem {{ user.name }}?
-        {{/showWelcome}}
-        {{#showOld}}
-            Como vai a vida?
-        {{/showOld}}
-        {{^showOld}}
-            Beleza?
-        {{/showOld}}
+    <hr />
 
-        <hr />
+    <h2>Produtos</h2>
 
-        <h2>Produtos</h2>
+    <ul>
+    {{#products}}
+        {{>partials/productItem}}
+    {{/products}}
+    </ul>
+    <ul>
+    {{#frasesDoDia}}
+        <li>{{.}}</li>
+    {{/frasesDoDia}}
+    </ul>
 
-        <ul>
-        {{#products}}
-            <li>{{title}} - R${{price}}</li>
-        {{/products}}
-        </ul>
-        <ul>
-        {{#frasesDoDia}}
-            <li>{{.}}</li>
+    
+    <hr />
+
+    <ul>
+        {{^frasesDoDia}}
+            Não há frases motivacionais hoje.
         {{/frasesDoDia}}
-        </ul>
-
-        
-        <hr />
-
-        <ul>
-            {{^frasesDoDia}}
-                Não há frases motivacionais hoje.
-            {{/frasesDoDia}}
-        </ul>
-    </body>
-</html>
+    </ul>
+{{>partials/footer}}

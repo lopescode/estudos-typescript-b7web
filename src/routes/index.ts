@@ -47,11 +47,15 @@ router.get("/", (req: Request, res: Response) => {
 });
 
 router.get("/contato", (req: Request, res: Response) => {
-  res.send("Formulário de Contato");
+  
+  /** Mustache: Conteúdo parcial */
+  res.render('contato')
 });
 
 router.get("/sobre", (req: Request, res: Response) => {
-  res.send("Página institucional sobre a empresa");
+  
+  /** Mustache: Conteúdo parcial */
+  res.render('sobre')
 });
 
 export default router;
