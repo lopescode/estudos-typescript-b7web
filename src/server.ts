@@ -129,6 +129,7 @@ server.listen(80);
 /** Pasta pública e arquivos estáticos */
 /************************************ */
 
+/*
 import express, { Request, Response } from "express";
 import path from "path";
 import mainRoutes from "./routes/index";
@@ -151,3 +152,12 @@ server.use((req: Request, res: Response) => {
 });
 
 server.listen(80);
+*/
+
+/********************************* */
+/** Introduzindo template engines */
+/******************************* */
+
+// Principais template engines
+// pub, mustache, edge e ejs
+
