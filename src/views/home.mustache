@@ -12,6 +12,9 @@
         {{#showOld}}
             Como vai a vida?
         {{/showOld}}
+        {{^showOld}}
+            Beleza?
+        {{/showOld}}
 
         <hr />
 
@@ -22,12 +25,18 @@
             <li>{{title}} - R${{price}}</li>
         {{/products}}
         </ul>
+        <ul>
+        {{#frasesDoDia}}
+            <li>{{.}}</li>
+        {{/frasesDoDia}}
+        </ul>
 
+        
         <hr />
 
         <ul>
-            {{#frasesDoDia}}
-                <li>{{.}}</li>
+            {{^frasesDoDia}}
+                Não há frases motivacionais hoje.
             {{/frasesDoDia}}
         </ul>
     </body>

@@ -14,7 +14,7 @@ router.get("/", (req: Request, res: Response) => {
 
   /** Mustache: Exibição condicional */
   let showOld: boolean = false;
-  if (user.age > 18) {
+  if (user.age < 18) {
     showOld = true;
   }
 
@@ -33,11 +33,16 @@ router.get("/", (req: Request, res: Response) => {
       { title: "Produto Y", price: 15 },
       { title: "Produto W", price: 20 }
     ],
-    // ListaS simples
+
+    // Listas simples
+    /*
     frasesDoDia: [
       "Alguma coisa muito legal",
       "Outra frase qualquer"
-    ]
+    ]*/
+
+    /** Mustache: Else de listas */
+    frasesDoDia: []
   });
 });
 
