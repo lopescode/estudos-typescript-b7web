@@ -6,7 +6,14 @@ import { Router, Request, Response } from "express";
 const router = Router();
 
 router.get("/", (req: Request, res: Response) => {
-  res.render('home');
+  let user = {
+    name: "Leonardo",
+    age: 24
+  }
+
+  res.render('home', {
+    user
+  });
 });
 
 router.get("/contato", (req: Request, res: Response) => {

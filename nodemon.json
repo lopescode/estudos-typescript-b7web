@@ -4,5 +4,5 @@
         "js": "node --harmony"
     },
     "script": "src/server.ts",
-    "ext": "ts mustache"
+    "ext": "ts json mustache"
 }
