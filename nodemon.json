@@ -1,0 +1,8 @@
+{
+    "verbose": true,
+    "execMap": {
+        "js": "node --harmony"
+    },
+    "script": "src/server.ts",
+    "ext": "ts mustache"
+}
