@@ -1,35 +1,43 @@
 {{>partials/header}}
-    {{#showWelcome}}
-        Opa, tudo bem {{ user.name }}?
-    {{/showWelcome}}
-    {{#showOld}}
-        Como vai a vida?
-    {{/showOld}}
-    {{^showOld}}
-        Beleza?
-    {{/showOld}}
+{{#showWelcome}}
+Opa, tudo bem {{ user.name }}?
+{{/showWelcome}}
+{{#showOld}}
+Como vai a vida?
+{{/showOld}}
+{{^showOld}}
+Beleza?
+{{/showOld}}
 
-    <hr />
+<hr />
 
-    <h2>Produtos</h2>
+<h2>Produtos</h2>
 
-    <ul>
+<ul>
     {{#products}}
-        {{>partials/productItem}}
+    {{>partials/productItem}}
     {{/products}}
-    </ul>
-    <ul>
+</ul>
+
+<h2>Produtos a partir de R$12</h2>
+<ul>
+    {{#expensives}}
+    {{>partials/productItem}}
+    {{/expensives}}
+</ul>
+
+<ul>
     {{#frasesDoDia}}
-        <li>{{.}}</li>
+    <li>{{.}}</li>
     {{/frasesDoDia}}
-    </ul>
+</ul>
 
-    
-    <hr />
 
-    <ul>
-        {{^frasesDoDia}}
-            Não há frases motivacionais hoje.
-        {{/frasesDoDia}}
-    </ul>
+<hr />
+
+<ul>
+    {{^frasesDoDia}}
+    Não há frases motivacionais hoje.
+    {{/frasesDoDia}}
+</ul>
 {{>partials/footer}}

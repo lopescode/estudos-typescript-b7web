@@ -1,6 +1,6 @@
 {{>partials/header}}
-    <h2>Qual ano você nasceu?</h2>
-    <!--
+<h2>Qual ano você nasceu?</h2>
+<!--
     <form method="GET">
         <input type="number" name="ano" placeholder="Digite o ano de nascimento" />
         <br />
@@ -9,15 +9,15 @@
     <hr/>
     -->
 
-    <!-- Recebendo dados via POST -->
-    <form method="POST" action="/idade-resultado">
-        <input type="number" name="ano" placeholder="Digite o ano de nascimento" />
-        <br />
-        <input type="submit" value="Enviar" />
-    </form>
-    <hr/>
+<!-- Recebendo dados via POST -->
+<form method="POST" action="/idade-resultado">
+    <input type="number" name="ano" placeholder="Digite o ano de nascimento" />
+    <br />
+    <input type="submit" value="Enviar" />
+</form>
+<hr />
 
-    {{#mostrarIdade}}
-        Você tem {{idade}} anos.
-    {{/mostrarIdade}}
+{{#mostrarIdade}}
+Você tem {{idade}} anos.
+{{/mostrarIdade}}
 {{>partials/footer}}
