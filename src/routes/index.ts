@@ -73,9 +73,10 @@ router.get("/nome", (req: Request, res: Response) => {
   })
 });
 
+/*
 router.get("/idade", (req: Request, res: Response) => {
 
-  /** Recebendo dados na URL 2 */
+  // Recebendo dados na URL 2
   let mostrarIdade: boolean = false;
   let idade: number = 0;
 
@@ -91,6 +92,29 @@ router.get("/idade", (req: Request, res: Response) => {
     mostrarIdade
   });
 })
+*/
 
+router.get('/idade', (req: Request, res: Response) => {
+  res.render('pages/idade')
+})
+
+/** Recebendo dados via POST */
+router.post("/idade-resultado", (req: Request, res: Response) => {
+
+  let mostrarIdade: boolean = false;
+  let idade: number = 0;
+
+  if(req.body.ano) {
+    let anoNascimento: number = parseInt(req.body.ano as string);
+    let anoAtual: number = new Date().getFullYear();
+    idade = anoAtual - anoNascimento;
+    mostrarIdade = true;
+  }
+
+  res.render('pages/idade', {
+    idade,
+    mostrarIdade
+  });
+})
 
 export default router;
